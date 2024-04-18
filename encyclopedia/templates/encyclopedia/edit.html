@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block body %}
+<form action="{% url 'encyclopedia:edit' title=title%}" method="post">
+    {% csrf_token %}
+    <div class="header">
+        <input class="edit" type="text" style="text-align: center; font-weight: 700; font-size: 2rem;" name="title" value="{{ title }}" readonly>
+    </div>
+    {% if messages %}
+    {% for message in messages %}
+        {% if message.tags == "error" %}
+            <b>{{ message }}</b>
+        {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

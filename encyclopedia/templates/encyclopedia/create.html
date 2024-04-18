@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block body %}
+<form action="{% url 'encyclopedia:create' %}" method="post">
+    {% csrf_token %}
+    {% if messages %}
+    {% for message in messages %}
+        {% if message.tags == "error" %}
+            <b>{{ message }}</b>
+        {% endif %}
+    {% endfor %}
+    {% endif %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
