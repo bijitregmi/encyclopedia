@@ -4,7 +4,7 @@ Encyclopedia is a Django web application that stores and displays Markdown files
 
 ## Installation
 
-Clone repository to a folder in your machine. Must [Python](https://www.python.org/) installed
+Clone repository into a folder in your machine. Must have [Python](https://www.python.org/) installed.
 
 ```bash
 cd {your_folder}
