@@ -8,11 +8,11 @@ Clone repository into a folder in your machine. Must have [Python](https://www.p
 
 ```bash
 cd {your_folder}
-pip install reqirements.txt
+pip install requirements.txt
 ```
 
 ## Usage
-Run the server to start Encyclopedia in a browser.  
+Run the server to start Encyclopedia in a browser.
 
 ```python
 python manage.py runserver
